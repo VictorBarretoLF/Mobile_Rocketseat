@@ -1,9 +1,14 @@
-import { Container, Logo } from "./styles";
+import { BackIcon, Container, Logo, BackButton } from "./styles";
 import logoImg from "../../assets/logo.png";
 
-export function Header() {
+export function Header({showBackButton = false}) {
+
     return (
         <Container>
+            {showBackButton && <BackButton>
+                <BackIcon name="chevron-back-outline" />
+            </BackButton>}
+            
             <Logo source={logoImg} />
         </Container>
     );
