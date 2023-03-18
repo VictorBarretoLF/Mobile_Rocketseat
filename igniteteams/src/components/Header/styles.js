@@ -19,5 +19,6 @@ export const BackButton = styled.TouchableOpacity`
 
 export const BackIcon = styled(Ionicons).attrs(({ theme }) => ({
     size: 32,
-    color: theme.COLORS.WHITE
-  }))``;
+    color: theme.COLORS.WHITE,
+    name: "chevron-back-outline"
+}))``;

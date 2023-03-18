@@ -1,12 +1,31 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import {Container} from "./styles";
+
+// COMPONENTS
+import { Highlight } from '../../components/Highlight';
 import { Header } from "../../components/Header";
-import * as Styled from "./styles";
+import { GroupCard } from "../../components/GroupCard";
+import { FlatList } from "react-native";
 
 export function Groups() {
+    const [groups, setGroups] = useState(["Eai Galera!!!", "Amigos"]);
+
     return (
-        <Styled.Container>
+        <Container>
             <Header />
-        </Styled.Container>
+            <Highlight 
+                title="Turmas"
+                subtitle="jogue com a sua turma"
+            />
+
+            <FlatList 
+                data={groups}
+                keyExtractor={item => item}
+                renderItem={({ item }) => (
+                    <GroupCard title={item} />
+                )}
+            />
+
+        </Container>
     );
 }

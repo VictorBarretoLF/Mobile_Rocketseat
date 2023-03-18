@@ -6,7 +6,7 @@ export function Header({showBackButton = false}) {
     return (
         <Container>
             {showBackButton && <BackButton>
-                <BackIcon name="chevron-back-outline" />
+                <BackIcon />
             </BackButton>}
             
             <Logo source={logoImg} />
