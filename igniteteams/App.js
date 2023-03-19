@@ -3,6 +3,7 @@ import { StatusBar } from "react-native";
 
 // SCREENS
 import { Groups } from "./src/screens/Groups";
+import { NewGroup } from "./src/screens/NewGroup";
 
 // THEME
 import theme from "./src/theme";
@@ -25,7 +26,7 @@ export default function App() {
                 backgroundColor="transparent"
                 translucent
             />
-            {fontsLoaded ? <Groups /> : <Loading />}
+            {fontsLoaded ? <NewGroup /> : <Loading />}
         </ThemeProvider>
     );
 }
