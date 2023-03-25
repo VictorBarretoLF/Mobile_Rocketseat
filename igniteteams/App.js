@@ -10,24 +10,26 @@ import theme from "./src/theme";
 
 // FONTS
 import {
-    useFonts,
-    Roboto_400Regular,
-    Roboto_700Bold,
+	useFonts,
+	Roboto_400Regular,
+	Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 import { Loading } from "./src/components/Loading";
 import { Players } from "./src/screens/Players";
 
-export default function App() {
-    const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+import { Routes } from "./src/routes";
 
-    return (
-        <ThemeProvider theme={theme}>
-            <StatusBar
-                barStyle="light-content"
-                backgroundColor="transparent"
-                translucent
-            />
-            {fontsLoaded ? <Players /> : <Loading />}
-        </ThemeProvider>
-    );
+export default function App() {
+	const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+
+	return (
+		<ThemeProvider theme={theme}>
+			<StatusBar
+				barStyle="light-content"
+				backgroundColor="transparent"
+				translucent
+			/>
+			{fontsLoaded ? <Routes /> : <Loading />}
+		</ThemeProvider>
+	);
 }
