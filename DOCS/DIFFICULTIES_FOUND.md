@@ -4,7 +4,7 @@
     npm install styled-components
 ```
 
-## in case of error when isntalling styled-components
+## in case of error when isntalling styled-components *happen 07/06/2023*
 
 ```bash
     npm install --save styled-components@5 # for an stable version
