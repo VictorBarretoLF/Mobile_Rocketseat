@@ -1,7 +1,5 @@
-## Initializing project using typescript
+# How to initialize the project
 
 ```bash
-    npx create-expo-app -t expo-template-blank-typescript
+    npx expo start
 ```
-
-For more information about how to initialize project using typescript: [click here](https://docs.expo.dev/guides/typescript/)

@@ -1,23 +1,3 @@
-### Starting from scratch: using a TypeScript template
-
-Option 1
-
-```bash
-    npx create-expo-app -t expo-template-blank-typescript
-```
-
-Option 2
-
-```bash
-    npx create-expo-app <app-name> --template
-```
-
-# Initializing App
-
-```bash
-    npx expo start
-```
-
 ### Installing styled-componentes
 
 ```bash
