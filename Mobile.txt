@@ -1,4 +1,0 @@
-navegação com menu e suporte às telas - https://github.com/alura-cursos/alura-gatito-static/tree/master
-aplicação com CONTEXT API - https://github.com/alura-cursos/react-native-context-api/tree/projeto-base
-
-testando
