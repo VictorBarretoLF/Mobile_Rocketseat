@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import { InputWithIcon } from "../../components/InputWithIcon";
-// import Logo from "../../assets/Logo.png";
+import { TodoHeader } from "../../components/TodoHeader";
 
 export function Home() {
 	return (
@@ -12,6 +12,14 @@ export function Home() {
 			</View>
 			<View style={styles.content}>
 				<InputWithIcon />
+
+				{/* TODO CONTAINER */}
+				<View>
+					<TodoHeader />
+
+					{/* TODO List */}
+					<View></View>
+				</View>
 			</View>
 		</View>
 	);

@@ -38,5 +38,6 @@ export const styles = StyleSheet.create({
 		marginTop: -27,
 		alignItems: "center",
 		justifyContent: "center",
+		marginBottom: 32,
 	},
 });
