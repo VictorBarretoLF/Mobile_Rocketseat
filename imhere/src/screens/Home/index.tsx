@@ -1,11 +1,35 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import {
+	FlatList,
+	ScrollView,
+	Text,
+	TextInput,
+	TouchableOpacity,
+	View,
+} from "react-native";
 
 import { styles } from "./styles";
 import { Participant } from "../../components/Participant";
 
 export function Home() {
+	const participants = [
+		"victor",
+		"vitória",
+		"zé",
+		"thiago",
+		"joaso",
+		"marcos",
+		"john",
+		"mike",
+		"peter",
+		"jeff",
+	];
+
 	function handleParticipantAdd() {
 		console.log("Você clicou no botão de Adicionar!");
+	}
+
+	function handleParticipantRemove(name: string) {
+		console.log(`Você clicou em remover o participante ${name}`);
 	}
 
 	return (
@@ -26,8 +50,35 @@ export function Home() {
 				</TouchableOpacity>
 			</View>
 
-			<Participant name="Rodrigo" />
-			<Participant name="Rodrigo" />
+			{/* ScrollView is used when it is necessary to display a list of items which may exceed the screen size. */}
+			{/* <ScrollView showsVerticalScrollIndicator={false}>
+				{participants.map((participant) => (
+					<Participant
+						key={participant}
+						name={participant}
+						onRemove={() => handleParticipantRemove("Rodrigo")}
+					/>
+				))}
+			</ScrollView> */}
+
+			<FlatList
+				data={participants}
+				keyExtractor={(item) => item}
+				renderItem={({ item }) => (
+					<Participant
+						key={item}
+						name={item}
+						onRemove={() => handleParticipantRemove("Rodrigo")}
+					/>
+				)}
+				showsVerticalScrollIndicator={false}
+				ListEmptyComponent={() => (
+					<Text style={styles.listEmptyText}>
+						Ninguém chegou no evento ainda? Adicione participantes a sua lista de
+						presença.
+					</Text>
+				)}
+			/>
 		</View>
 	);
 }
