@@ -5,3 +5,5 @@ For a simple documentation about react native: [click here](https://react-native
 # Libs de toast
 
 Animated toast message component for React Native. [click here](https://www.npmjs.com/package/react-native-toast-message)
+
+If you need more exemples, access this link: [here](https://github.com/calintamas/react-native-toast-message)
