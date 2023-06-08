@@ -8,6 +8,8 @@ export const styles = StyleSheet.create({
 	header: {
 		height: 173,
 		backgroundColor: "transparent",
+		alignItems: "center",
+		justifyContent: "center",
 	},
 	content: {
 		flex: 1,
