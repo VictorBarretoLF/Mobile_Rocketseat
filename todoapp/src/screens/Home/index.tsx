@@ -12,7 +12,11 @@ export type Todo = {
 	done: boolean;
 };
 
-const DEFAULT_TODO: Todo = { uuid: "", title: "", done: false };
+const DEFAULT_TODO: Todo = {
+	uuid: uuid.v4().toLocaleString(),
+	title: "Teste",
+	done: false,
+};
 
 export function Home() {
 	const [todos, setTodos] = useState<Todo[]>([]);
@@ -42,7 +46,10 @@ export function Home() {
 					data={todos}
 					keyExtractor={(key) => key.uuid}
 					renderItem={({ item }) => (
-						<View key={item.uuid} style={{ backgroundColor: "red" }}>
+						<View
+							key={item.uuid}
+							style={{ backgroundColor: "#262626", height: 64, width: "100%" }}
+						>
 							<Text style={{ color: "#fff" }}>{item.title}</Text>
 						</View>
 					)}

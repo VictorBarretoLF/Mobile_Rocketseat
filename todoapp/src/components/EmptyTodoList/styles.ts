@@ -5,6 +5,8 @@ export const styles = StyleSheet.create({
 		paddingTop: 48,
 		paddingHorizontal: 20,
 		alignItems: "center",
+		borderTopWidth: 2,
+		borderColor: "#333333",
 	},
 	imageContainer: {
 		marginBottom: 16,
