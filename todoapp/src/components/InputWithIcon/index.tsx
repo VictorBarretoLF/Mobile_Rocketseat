@@ -2,12 +2,17 @@ import { Keyboard, Text, TextInput, TouchableOpacity, View } from "react-native"
 import { styles } from "./styles";
 import { useState } from "react";
 
-export function InputWithIcon() {
+type Props = {
+	createTodo: (todo: string) => void;
+};
+
+export function InputWithIcon({ createTodo }: Props) {
 	const [isFocused, setFocus] = useState<boolean>(false);
 	const [todo, setTodo] = useState<string>("");
 
 	function onPressHandler() {
 		Keyboard.dismiss();
+		createTodo(todo);
 		setTodo("");
 		setFocus(false);
 	}

@@ -1,25 +1,51 @@
-import { StatusBar } from "expo-status-bar";
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { FlatList, Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import { InputWithIcon } from "../../components/InputWithIcon";
-import { TodoHeader } from "../../components/TodoHeader";
+import { TodosInfo } from "../../components/TodosInfo";
+import { useState } from "react";
+import uuid from "react-native-uuid";
+
+export type Todo = {
+	uuid: string;
+	title: string;
+	done: boolean;
+};
+
+const DEFAULT_TODO: Todo = { uuid: "", title: "", done: false };
 
 export function Home() {
+	const [todos, setTodos] = useState<Todo[]>([]);
+
+	function createTodo(title: string) {
+		const newTodo: Todo = {
+			uuid: uuid.v4().toLocaleString(),
+			title: title.trim(),
+			done: false,
+		};
+		setTodos((prevState) => [...prevState, newTodo]);
+	}
+
 	return (
 		<View style={styles.container}>
 			<View style={styles.header}>
 				<Image source={require("../../assets/Logo.png")} />
 			</View>
 			<View style={styles.content}>
-				<InputWithIcon />
+				<InputWithIcon createTodo={createTodo} />
 
 				{/* TODO CONTAINER */}
-				<View>
-					<TodoHeader />
+				<TodosInfo todos={todos} />
 
-					{/* TODO List */}
-					<View></View>
-				</View>
+				{/* TODO List */}
+				<FlatList
+					data={todos}
+					keyExtractor={(key) => key.uuid}
+					renderItem={({ item }) => (
+						<View key={item.uuid} style={{ backgroundColor: "red" }}>
+							<Text style={{ color: "#fff" }}>{item.title}</Text>
+						</View>
+					)}
+				/>
 			</View>
 		</View>
 	);
