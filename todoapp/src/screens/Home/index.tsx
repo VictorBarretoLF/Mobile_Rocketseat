@@ -4,6 +4,7 @@ import { InputWithIcon } from "../../components/InputWithIcon";
 import { TodosInfo } from "../../components/TodosInfo";
 import { useState } from "react";
 import uuid from "react-native-uuid";
+import { EmptyTodoList } from "../../components/EmptyTodoList";
 
 export type Todo = {
 	uuid: string;
@@ -45,19 +46,7 @@ export function Home() {
 							<Text style={{ color: "#fff" }}>{item.title}</Text>
 						</View>
 					)}
-					ListEmptyComponent={() => (
-						<View style={{ paddingTop: 48, paddingHorizontal: 20, alignItems: "center" }}>
-							<View style={{ marginBottom: 16 }}>
-								<Image source={require("../../assets/Clipboard.png")} />
-							</View>
-							<Text style={{ color: "#808080", textAlign: "center", fontWeight: "700" }}>
-								Você ainda não tem tarefas cadastradas
-							</Text>
-							<Text style={{ color: "#808080", textAlign: "center" }}>
-								Crie tarefas e organize seus itens a fazer
-							</Text>
-						</View>
-					)}
+					ListEmptyComponent={() => <EmptyTodoList />}
 				/>
 			</View>
 		</View>
