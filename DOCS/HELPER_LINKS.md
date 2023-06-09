@@ -11,3 +11,7 @@ A video from RocketSeat on how to use the react native debug with breakpoints: [
 Animated toast message component for React Native. [click here](https://www.npmjs.com/package/react-native-toast-message)
 
 If you need more exemples, access this link: [here](https://github.com/calintamas/react-native-toast-message)
+
+# Using *react-native-uuid* to generate random uuids
+
+[click here](https://www.npmjs.com/package/react-native-uuid)
