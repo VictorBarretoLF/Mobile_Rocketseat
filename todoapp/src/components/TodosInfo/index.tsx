@@ -9,7 +9,7 @@ type Props = {
 };
 
 export function TodosInfo({ todos }: Props) {
-	const completedTodos = todos.filter((todo) => !todo.done).length;
+	const completedTodos = todos.filter((todo) => todo.done).length;
 
 	return (
 		<View style={styles.container}>
