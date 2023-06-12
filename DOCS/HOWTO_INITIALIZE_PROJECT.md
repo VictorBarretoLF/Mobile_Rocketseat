@@ -11,3 +11,9 @@
 ```bash
     npx expo start
 ```
+
+or if you want to clear the cache
+
+```bash
+    npx expo start --clear
+```
