@@ -19,3 +19,9 @@ If you need more exemples, access this link: [here](https://github.com/calintama
 # Phosphoricons
 
 Phosphor is a flexible icon family for interfaces, diagrams, presentations. [link here](https://phosphoricons.com/)
+
+# react-native-vector-icons
+
+react-native-vector-icons is a popular library for using vector icons in React Native projects. It includes a wide range of customizable icons that can be used for buttons, logos, navigation/tab bars, and more
+
+For more information about it react-native-vector-icons, [click here](https://www.npmjs.com/package/react-native-vector-icons)
