@@ -22,7 +22,7 @@ Here are some useful links:
 To build an Android APK, use the following command:
 
 ```bash
-eas build -p android --profile preview
+    eas build -p android --profile preview
 ```
 
 `eas.json`
