@@ -10,18 +10,18 @@ If you need more exemples, access this link: [here](https://github.com/calintama
 
 # babel-plugin-module-resolver
 
-## Overview
+**`babel-plugin-module-resolver`** é um plugin para o Babel projetado para ajudar no gerenciamento de caminhos de módulos no seu código JavaScript. Este plugin permite que você remapeie os caminhos dos módulos que está importando, permitindo criar declarações de importação mais organizadas e limpas.
 
-`babel-plugin-module-resolver` is a plugin for Babel designed to help with managing module paths in your JavaScript code. This plugin allows you to remap the paths of the modules you're importing, letting you create more organized and clean import statements.
-
-[more info](https://github.com/tleunen/babel-plugin-module-resolver)
+[Mais informações](https://github.com/tleunen/babel-plugin-module-resolver)
 
 # Phosphoricons
 
 Phosphor is a flexible icon family for interfaces, diagrams, presentations. [link here](https://phosphoricons.com/)
 
-# react-native-vector-icons
+# Biblioteca react-native-vector-icons
 
-react-native-vector-icons is a popular library for using vector icons in React Native projects. It includes a wide range of customizable icons that can be used for buttons, logos, navigation/tab bars, and more
+A react-native-vector-icons é uma biblioteca popular para a utilização de ícones vetoriais em projetos React Native. Ela inclui uma ampla gama de ícones personalizáveis que podem ser usados para botões, logos, barras de navegação/abas e muito mais.
 
-For more information about it react-native-vector-icons, [click here](https://www.npmjs.com/package/react-native-vector-icons)
+Para obter mais informações sobre a biblioteca react-native-vector-icons, [clique aqui](https://www.npmjs.com/package/react-native-vector-icons).
+
+Visite este [site](https://oblador.github.io/react-native-vector-icons/) para ver os ícones disponíveis na biblioteca react-native-vector-icons.
