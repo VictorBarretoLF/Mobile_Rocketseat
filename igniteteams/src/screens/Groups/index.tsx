@@ -6,6 +6,7 @@ import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
 
 import { Container } from "./styles";
+import { Button } from "@components/Button";
 
 export function Groups() {
     const [groups, setGroups] = useState<string[]>(["Galera da Rocket"]);
@@ -21,6 +22,8 @@ export function Groups() {
                 keyExtractor={(item) => item}
                 renderItem={({ item }) => <GroupCard title={item} />}
             />
+
+            <Button title="Criar nova turma" />
         </Container>
     );
 }
