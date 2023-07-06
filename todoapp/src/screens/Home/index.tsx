@@ -19,7 +19,7 @@ const DEFAULT_TODO: Todo = {
 };
 
 export function Home() {
-	const [todos, setTodos] = useState<Todo[]>([]);
+	const [todos, setTodos] = useState<Todo[]>([DEFAULT_TODO]);
 
 	function createTodo(title: string) {
 		const newTodo: Todo = {
@@ -48,7 +48,7 @@ export function Home() {
 					renderItem={({ item }) => (
 						<View
 							key={item.uuid}
-							style={{ backgroundColor: "#262626", height: 64, width: "100%" }}
+							style={{ backgroundColor: "#262626", minHeight: 64, width: "100%" }}
 						>
 							<Text style={{ color: "#fff" }}>{item.title}</Text>
 						</View>
